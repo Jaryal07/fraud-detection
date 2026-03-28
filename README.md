@@ -82,19 +82,20 @@ joblib==1.3.1
 
 ```
 fraud-detection/
-├── fraud_detection.py          # Main model training script
+├── fraud_detection.py          # Main model training script (your code) [file:1]
 ├── requirements.txt            # Python dependencies
-├── creditcard.csv              # Dataset (download separately)
-├── models/
-│   ├── fraud_detection_model.pkl    # Trained Random Forest
-│   └── scaler.pkl                   # StandardScaler object
-├── outputs/
-│   ├── class_distribution.png       # Class imbalance visualization
-│   ├── model_performance.png        # Comprehensive metrics plot
-│   └── feature_importance.png       # Top 10 features
+├── creditcard.csv              # Dataset (~150MB, download from Kaggle)
+├── models/                     # Trained models & scaler
+│   ├── fraud_detection_model.pkl     # Random Forest model
+│   ├── scaler.pkl                   # StandardScaler object
+│   └── isolation_forest_model.pkl    # Anomaly detection model
+├── outputs/                    # Visualizations
+│   ├── class_distribution.png       # Class imbalance (pie/bar)
+│   ├── feature_importance.png       # Top 10 features
+│   └── model_performance.png        # Metrics & curves
 ├── config/
 │   └── model_params.json            # Hyperparameters
-└── README.md                   # This file
+└── README.md                   # Project documentation
 ```
 
 ---
